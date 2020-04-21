@@ -7,7 +7,7 @@
     "start": "electron .",
     "build": "npx electron-builder --version",
     "release": "sudo npx electron-builder -m -p always",
-    "publish": "GH_TOKEN=1f74cdf612282632af6553da1dbfe133ecae0f28 sudo npx electron-builder --mac -p onTagOrDraft"
+    "publish": "GH_TOKEN=60f2b83fc58bdd5edccad8b8dedb174841fb195b sudo npx electron-builder --mac -p onTagOrDraft"
   },
   "repository": "https://github.com/PatrickBe29/e-updater.git",
   "keywords": [
