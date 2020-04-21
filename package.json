@@ -1,0 +1,35 @@
+{
+  "name": "electron-updater",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "npx electron-builder --version",
+    "release": "sudo npx electron-builder -m --publish 'always'"
+  },
+  "repository": "https://code.siemens.com/patrick.berninger/update-test",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^8.2.2",
+    "electron-builder": "^22.5.1"
+  },
+  "win": {
+    "certificateFile": "private/Update-Certificate.p12",
+    "certificatePassword": "",
+    "verifyUpdateCodeSignature": false
+  },
+  "dependencies": {},
+  "publish": {
+    "provider": "generic",
+    "url": "https://code.siemens.com/"
+  }
+}
