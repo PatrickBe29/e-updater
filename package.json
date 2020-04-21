@@ -1,14 +1,15 @@
 {
-  "name": "electron-updater",
+  "name": "e-update",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "build": "npx electron-builder --version",
-    "release": "sudo npx electron-builder -m --publish 'always'"
+    "release": "sudo npx electron-builder -m -p always",
+    "publish": "GH_TOKEN=1f74cdf612282632af6553da1dbfe133ecae0f28 sudo npx electron-builder --mac -p onTagOrDraft"
   },
-  "repository": "https://code.siemens.com/patrick.berninger/update-test",
+  "repository": "https://github.com/PatrickBe29/e-updater.git",
   "keywords": [
     "Electron",
     "quick",
@@ -27,9 +28,11 @@
     "certificatePassword": "",
     "verifyUpdateCodeSignature": false
   },
-  "dependencies": {},
+  "dependencies": {
+    "electron-log": "^4.1.1",
+    "electron-updater": "^4.2.5"
+  },
   "publish": {
-    "provider": "generic",
-    "url": "https://code.siemens.com/"
+    "provider": "github"
   }
 }
